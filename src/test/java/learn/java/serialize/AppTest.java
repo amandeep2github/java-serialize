@@ -1,4 +1,4 @@
-package learn.java.java_mapper;
+package learn.java.serialize;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

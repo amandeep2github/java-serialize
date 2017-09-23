@@ -1,4 +1,4 @@
-package learn.java.java_mapper.entity;
+package learn.java.serialize.entity;
 
 import java.util.Date;
 

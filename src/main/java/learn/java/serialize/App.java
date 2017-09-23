@@ -1,4 +1,4 @@
-package learn.java.java_mapper;
+package learn.java.serialize;
 
 /**
  * Hello world!

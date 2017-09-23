@@ -1,4 +1,4 @@
-package learn.java.java_mapper.jackson;
+package learn.java.serialize.jackson;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +11,9 @@ import java.time.format.DateTimeFormatter;
 
 import org.junit.Test;
 
-import learn.java.java_mapper.entity.Festival;
+import learn.java.serialize.entity.Festival;
+import learn.java.serialize.json.JsonSerializer;
+import learn.java.serialize.json.jackson.JacksonJsonSerializer;
 
 public class JacksonTest {
 
@@ -25,8 +27,8 @@ public class JacksonTest {
 		festival.setCapacity(100);
 		festival.setNumVIPTicketSold(4);
 		festival.setNumGeneralTicketSold(1);
-		JacksonMapper<Festival> jm = new JacksonMapper<Festival>();
-		String actual = jm.convert(festival);
+		JsonSerializer<Festival> jm = new JacksonJsonSerializer<Festival>();
+		String actual = jm.serialize(festival);
 		String expected = new String(Files.readAllBytes(Paths.get("./src/test/json/Festival-flat.json")));
 		assertEquals(expected, actual);
 	}
