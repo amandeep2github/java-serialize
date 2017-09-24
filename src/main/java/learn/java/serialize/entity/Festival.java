@@ -2,12 +2,16 @@ package learn.java.serialize.entity;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 
 //@Data
 public class Festival {
 	private String name;
+	@JsonFormat(pattern="MMM dd, yyyy", timezone="IST")
 	private Date startDate;
+	@JsonFormat(pattern="MMM dd, yyyy", timezone="IST")
 	private Date endDate;
 	private int capacity;
 	private int numVIPTicketSold;

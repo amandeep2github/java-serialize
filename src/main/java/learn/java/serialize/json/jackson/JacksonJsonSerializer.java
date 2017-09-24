@@ -27,4 +27,10 @@ public class JacksonJsonSerializer <T> implements JsonSerializer<T>{
 	public T deserialize(String str) throws JsonProcessingException{
 		return null;
 	}
+
+	@Override
+	public String getSubJson(String json, boolean prettyPrint, String... elements) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

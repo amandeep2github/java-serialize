@@ -1,4 +1,4 @@
-package learn.java.serialize.jackson;
+package learn.java.serialize.json.jackson;
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,8 +29,24 @@ public class JacksonTest {
 		festival.setNumGeneralTicketSold(1);
 		JsonSerializer<Festival> jm = new JacksonJsonSerializer<Festival>();
 		String actual = jm.serialize(festival);
-		String expected = new String(Files.readAllBytes(Paths.get("./src/test/json/Festival-flat.json")));
+		String expected = new String(Files.readAllBytes(Paths.get("./src/test/json/Festival-flat-dateMMMddyyyy.json")));
 		assertEquals(expected, actual);
 	}
+	
+	/*@Test
+	public void testDateFormat() throws IOException {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+		Festival festival = new Festival();
+		festival.setName("Tech Week");
+		festival.setStartDate(Date.valueOf(LocalDate.parse("September 11, 2017", dtf)));
+		festival.setEndDate(Date.valueOf(LocalDate.parse("September 18, 2017", dtf)));
+		festival.setCapacity(100);
+		festival.setNumVIPTicketSold(4);
+		festival.setNumGeneralTicketSold(1);
+		JsonSerializer<Festival> jm = new JacksonJsonSerializer<Festival>();
+		String actual = jm.serialize(festival);
+		String expected = new String(Files.readAllBytes(Paths.get("./src/test/json/Festival-flat-dateMMMddyyyy.json")));
+		assertEquals(expected, actual);
+	}*/
 
 }

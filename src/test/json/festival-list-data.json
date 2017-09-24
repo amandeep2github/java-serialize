@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Tech Week",
+    "startDate": "Sep 11, 2017",
+    "endDate": "Sep 18, 2017",
+    "capacity": 100,
+    "numVIPTicketSold": 4,
+    "numGeneralTicketSold": 1
+  },
+  {
+    "name": "Hackovation",
+    "startDate": "Aug 11, 2017",
+    "endDate": "Sep 22, 2017",
+    "capacity": 50,
+    "numVIPTicketSold": 3,
+    "numGeneralTicketSold": 5
+  }
+]
